@@ -31,7 +31,7 @@ let signingConfig = {
 const customDocumentLoader = {};
 customDocumentLoader[CERTIFICATE_NAMESPACE] = vaccinationContext;
 
-const port = process.env.PORT || 4324;
+const port = process.env.PORT || 8079;
 
 const server = http.createServer(async (req, res) => {
     console.time(req.url);

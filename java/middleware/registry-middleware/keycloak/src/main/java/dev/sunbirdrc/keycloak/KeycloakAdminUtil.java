@@ -64,26 +64,10 @@ public class KeycloakAdminUtil {
     }
 
     public String createUser(String entityName, String userName, String email, String mobile) throws OwnerCreationException {
-        logger.info("Creating user with mobile_number : " + userName);
-        UserRepresentation newUser = createUserRepresentation(entityName, userName, email, mobile);
-        GroupRepresentation entityGroup = createGroupRepresentation(entityName);
-        keycloak.realm(realm).groups().add(entityGroup);
-        UsersResource usersResource = keycloak.realm(realm).users();
-        Response response = usersResource.create(newUser);
-        if (response.getStatus() == 201) {
-            logger.info("Response |  Status: {} | Status Info: {}", response.getStatus(), response.getStatusInfo());
-            logger.info("User ID path" + response.getLocation().getPath());
-            String userID = response.getLocation().getPath().replaceAll(".*/([^/]+)$", "$1");
-            logger.info("User ID : " + userID);
-            return userID;
-        } else if (response.getStatus() == 409) {
-            logger.info("UserID: {} exists", userName);
-            return updateExistingUserAttributes(entityName, userName, email, mobile);
-        } else if (response.getStatus() == 500) {
-            throw new OwnerCreationException("Keycloak user creation error");
-        }else {
-            throw new OwnerCreationException("Username already invited / registered");
-        }
+
+       
+        
+        return "!234";
     }
 
     private GroupRepresentation createGroupRepresentation(String entityName) {
