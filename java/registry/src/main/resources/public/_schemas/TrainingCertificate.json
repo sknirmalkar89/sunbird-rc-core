@@ -69,6 +69,6 @@
 		], 
 		"systemFields": ["osCreatedAt", "osUpdatedAt", "osCreatedBy", "osUpdatedBy"],
 		"enableLogin": false,
-		"credentialTemplate": "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/credTemp.json"
+		"credentialTemplate": "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/template.json"
 	}
 }
