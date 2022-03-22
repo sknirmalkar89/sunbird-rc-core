@@ -6,6 +6,7 @@
 			"type": [
 				"VerifiableCredential"
 			],
+	                "id":"did:sunbird:{{osid}}",
 			"issuanceDate": "{{osCreatedAt}}",
 			"credentialSubject": {
         "type":"{{type}}",
