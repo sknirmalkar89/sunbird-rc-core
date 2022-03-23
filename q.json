@@ -1,7 +1,7 @@
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/context.json"
+    "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/c.json"
   ],
   "type": [
     "VerifiableCredential"
