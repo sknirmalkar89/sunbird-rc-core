@@ -1,0 +1,27 @@
+{
+			"@context": [
+			"https://www.w3.org/2018/credentials/v1",			
+			"https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/c.json"
+		 ],
+			"type": [
+				"VerifiableCredential"
+			],
+	                "id":"did:sunbird:{{osid}}",
+			"issuanceDate": "{{osCreatedAt}}",
+			"credentialSubject": {
+                "type":"{{certificateLabel}}",
+				"name": "{{recipient.name}}",
+				"trainingName": "{{training.name}}",
+				"trainingId":"{{training.id}}"	
+			 },
+       "issuer":{			         
+                "id":"https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/READ.md#Issuer",
+                 "type":[
+                    "Issuer"
+                 ],
+                 "name":"{{issuer.name}}",
+                 "url":"{{issuer.url}}",
+                 "publicKey":["{{issuer.kid}}"]
+          }
+			
+     	}
