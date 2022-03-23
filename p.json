@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/v1/context.json",
+    "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/context.json"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "did:sunbird:{{osid}}",
+  "issuanceDate": "{{osCreatedAt}}",
+  "credentialSubject": {
+    "type": "{{certificateLabel}}",
+    "name": "{{recipient.name}}",
+    "trainingName": "{{training.name}}",
+    "trainingId": "{{training.id}}"
+  },
+  "issuer": {
+    "id": "https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/READ.md#Issuer",
+    "type": [
+      "Issuer"
+    ],
+    "name": "{{issuer.name}}",
+    "url": "{{issuer.url}}",
+    "publicKey": [
+      "{{issuer.kid}}"
+    ]
+  },
+  "signatory":[
+      {{#each signatory}}
+      {
+        "id":"https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/READ.md#signatory",
+        "identity":"{{identity}}",
+        "type":[
+            "Extension",
+            "extensions:SignatoryExtension"
+         ],
+        "designation":"{{designation}}",
+        "name":"{{name}}"
+      }
+       {{#unless @last}}, {{/unless}}
+       {{/each}}              
+			      
+  ]
+}
