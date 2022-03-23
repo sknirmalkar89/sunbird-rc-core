@@ -1,0 +1,97 @@
+{
+			"@context": [
+			"https://raw.githubusercontent.com/sknirmalkar89/sunbird-rc-core/main/sunbird-specs/v1/context.json",			
+			{
+		      "@context": {
+		        "@version": 1.1,
+		        "@protected": true,
+		        "TrainingCertificate": {
+		          "@id": "https://github.com/sunbird-specs/vc-specs#TrainingCertificate",
+		          "@context": {
+		            "id": "@id",
+		            "@version": 1.1,
+		            "@protected": true,
+		            "TrainingCertificate": "schema:Text"
+		          }
+		        },
+		        "trainingName":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#trainedName",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+            "trainingId":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#trainedId",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+            "certificateId":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#certificateId",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "name":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#name",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "publicKey":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#publicKey",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "url":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#url",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "designation":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#designation",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "image":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#image",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        },
+		        "identity":{
+		          "@id":"https://github.com/sunbird-specs/vc-specs#identity",
+		          "@context": {
+		            "name":"schema:Text"
+		          }
+		        }
+		      }
+		    }
+		 ],
+			"type": [
+				"VerifiableCredential"
+			],
+			"issuanceDate": "{{osCreatedAt}}",
+      "id":"did:sunbird:{{osid}}",
+			"credentialSubject": {
+        "type":"{{type}}",
+        
+				"name": "{{recipient.name}}",
+				"trainingName": "{{training.name}}",
+				"trainingId":"{{training.id}}"	
+			 },
+    
+      "issuer":{			         
+                 "id":"https://staging.sunbirded.org/certs/Issuer.json",
+                 "type":[
+                    "Issuer"
+                 ],
+                 "name":"{{issuer.name}}",
+                 "url":"{{issuer.url}}",
+                 "publicKey":["{{issuer.kid}}"]
+          }
+			
+     	}
